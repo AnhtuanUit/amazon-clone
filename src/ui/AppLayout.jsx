@@ -16,10 +16,10 @@ function AppLayout() {
   }
 
   return (
-    <div className="grid grid-cols-1">
+    <div className="grid h-screen grid-rows-[auto_1fr_auto]">
       <Header onOpenMenu={openMenu} />
       <SideMenu isOpen={isOpen} onCloseMenu={closeMenu} />
-      <div className="h-96">
+      <div className="h-screen bg-gray-300">
         <Outlet />
       </div>
       <Footer />

@@ -7,7 +7,7 @@ function SideMenu({ isOpen, onCloseMenu }) {
       {isOpen && (
         <div
           onClick={onCloseMenu}
-          className="fixed h-screen w-screen bg-black opacity-70 transition-opacity"
+          className="fixed h-screen w-full bg-black opacity-70 transition-opacity"
         >
           <HiOutlineXMark className="ml-80 h-8 w-8 text-white  transition-opacity" />
         </div>
