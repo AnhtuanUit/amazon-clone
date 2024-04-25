@@ -10,7 +10,7 @@ import CartButton from "./CartButton";
 function Header({ onOpenMenu }) {
   return (
     <header className="flex flex-col">
-      <div className="flex bg-[#131921]">
+      <div className="flex items-center bg-[#131921]">
         <Logo className="ml-2" />
         <LogoDelivery />
         <SearchBox className="grow" />
