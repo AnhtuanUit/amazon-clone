@@ -4,10 +4,7 @@ Welcome to the Amazon Clone project! This project aims to replicate the core fea
 
 ## Ideation and Planning
 
-### Features Breakdown
-
-To start, we'll use draw.io or any diagramming tool to plan out the features and pages of our Amazon clone. Here's a breakdown of some key features:
-
+### Step 1: Gathering Requirements and Features
 1. **Homepage**: Displays popular products, deals, and promotions.
 2. **Product Listing**: Displays a list of products with filtering and sorting options.
 3. **Product Details**: Detailed view of a single product with images, description, reviews, and related products.
@@ -16,31 +13,45 @@ To start, we'll use draw.io or any diagramming tool to plan out the features and
 6. **Checkout**: Enter shipping details, select payment method, and place orders.
 7. **Order History**: View past orders and their status.
 
-### Component Structure
 
-We'll structure the project into reusable components to maintain a clean and scalable codebase. Components such as Navbar, ProductCard, ProductDetails, Cart, and Checkout will be created and reused throughout the application.
 
-### Design Planning
+### Step 2 & 3: Feature Categories and Pages
 
-Before diving into development, we'll plan out the design aspects including:
+#### Feature Categories
 
-- Text styles and fonts
-- Color palette
-- Component designs and layouts
+1. **Product**: A comprehensive collection of Amazon products organized into various categories.
+2. **Cart**: A user interface for managing selected items for purchase.
+3. **Order**: A record of order history categorized by product groups and pricing information.
+4. **User**: User account management including login, logout, Stripe payment integration, and a single shipping address.
 
-## Technologies Used
+#### Pages
 
-- ReactJS: Frontend library for building user interfaces.
-- ReactQuery: For data fetching and caching.
-- Vite: Build tooling for modern web development.
-- Redux: For managing global state (optional).
-- Redux Thunk: Middleware for asynchronous actions (optional).
-- Redux Toolkit: Utility functions to simplify Redux logic (optional).
-- Context API: For managing local component state.
-- Hooks: For functional components to manage state and lifecycle.
-- Custom Hooks: To encapsulate reusable logic.
-- Memoization: Optimization techniques using `memo`, `useMemo`, and `useCallback`.
-- TypeScript: Although not used in this project, it's worth mentioning for future considerations.
+1. **Homepage**: `GET /homepage`
+2. **Search**: `GET /s?k={keywords}`
+3. **Product Detail**: `GET /{productID}`
+4. **Cart**: `GET /cart`
+5. **Payment**: `GET /payment`
+6. **Order History**: `GET /order`
+7. **Signup**: `GET /signup`
+8. **Login**: `GET /login`
+9. **Not Found (404)**: `GET /*`
+
+
+### Step 3 & 4: State and Technology Decisions
+
+#### State Management
+1. **Homepage**: Managed by global remote state.
+2. **Product**: Managed by global remote state.
+3. **Cart**: Managed by global UI state.
+4. **Order**: Managed by global remote state.
+5. **User**: Managed by global remote state.
+
+#### Technology Decisions
+1. **Routers**: Utilizes React Router for navigation.
+2. **Styling**: Tailwind CSS for styling components.
+3. **Global Remote State**: Managed with React Query.
+4. **Global UI State**: Managed with React Context combined with useReducer/useState hooks, and React Router.
+5. **Backend**: Supabase for backend services, authentication, file storage, and more.
 
 ## Getting Started
 
