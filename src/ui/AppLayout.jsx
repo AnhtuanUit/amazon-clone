@@ -1,19 +1,28 @@
 import { Outlet } from "react-router-dom";
+import Header from "./Header";
+import Footer from "./Footer";
+import SideMenu from "./SideMenu";
+import { useState } from "react";
 
 function AppLayout() {
-  return (
-    <div>
-      <header>
-        <h1>Header</h1>
-      </header>
+  const [isOpen, setOpen] = useState(false);
 
-      <aside>
-        <span>Sidebar Menu</span>
-      </aside>
-      <Outlet />
-      <footer>
-        <h3>Footer</h3>
-      </footer>
+  function openMenu() {
+    setOpen(true);
+  }
+
+  function closeMenu() {
+    setOpen(false);
+  }
+
+  return (
+    <div className="grid grid-cols-1">
+      <Header onOpenMenu={openMenu} />
+      <SideMenu isOpen={isOpen} onCloseMenu={closeMenu} />
+      <div className="h-96">
+        <Outlet />
+      </div>
+      <Footer />
     </div>
   );
 }
