@@ -9,7 +9,7 @@ import CartButton from "./CartButton";
 
 function Header({ onOpenMenu }) {
   const itemHoverClassName =
-    "border border-transparent hover:border-white rounded-sm px-2 hover:ring-0";
+    "border border-transparent hover:border-white rounded-sm px-2 hover:px-[7px] hover:ring-0";
 
   return (
     <header className="flex flex-col">
