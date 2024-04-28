@@ -187,7 +187,7 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className="bg-dark-blue">
+      <div className="bg-me-darkblue-400">
         <ul className="mx-auto grid w-[1000px] grid-cols-7 gap-y-4  p-2 py-7">
           <li>
             <a href="#" className="flex flex-col">
@@ -400,7 +400,7 @@ function Footer() {
           </li>
         </ul>
       </div>
-      <div className="bg-dark-blue">
+      <div className="bg-me-darkblue-400">
         <div className="text-[#ddd mx-auto flex w-[1000px] flex-col items-center gap-2 py-4">
           <div className="flex items-center justify-center gap-4">
             <a href="#" className="text-xs font-medium">
