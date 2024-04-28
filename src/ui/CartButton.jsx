@@ -1,11 +1,22 @@
-import CartIcon from "./icons/CartIcon";
+import { Link } from "react-router-dom";
+import IconSprite from "./IconSprite";
 
-function CartButton() {
+function CartButton({ className }) {
+  const combineClassName = `flex cursor-pointer items-center pt-1 ${className}`;
   return (
-    <div className="mr-4 flex cursor-pointer items-center justify-center text-white">
-      <CartIcon />
-      <span>Cart</span>
-    </div>
+    <Link className={combineClassName}>
+      <div className="flex items-end">
+        {/* Start - Cart Icon */}
+        <div className="relative mb-1">
+          <span className="text-me-orange-200 absolute left-[17px] top-[-2px] text-base font-bold leading-none">
+            0
+          </span>
+          <IconSprite name="cart" alt="Icon cart" />
+        </div>
+        {/* End - Cart Icon */}
+        <span className="text-sm font-bold text-white">Cart</span>
+      </div>
+    </Link>
   );
 }
 

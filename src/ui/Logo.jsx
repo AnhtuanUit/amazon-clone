@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import LogoBase from "./LogoBase";
+import IconSprite from "./IconSprite";
 
-function Logo({ className = "" }) {
+function Logo({ className }) {
   return (
-    <Link to="/" className={`px-3 ${className}`}>
-      <LogoBase logoName="logo" className="mt-[12px]" />
+    <Link to="/" className={`h-[50px] ${className}`}>
+      <IconSprite name="logo" alt="Amazon logo" className="mt-[12px]" />
     </Link>
   );
 }

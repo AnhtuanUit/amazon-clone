@@ -1,8 +1,12 @@
-function Account() {
+function Account({ className }) {
+  const combineClassName = `flex items-center ${className}`;
+
   return (
-    <div className="mx-2 my-2 flex cursor-pointer flex-col items-start justify-center text-white">
-      <span className="text-xs">Hello, sign in</span>
-      <span className="text-sm font-bold">Account & List </span>
+    <div className={combineClassName}>
+      <div className="flex cursor-pointer flex-col text-white">
+        <span className="text-xs">Hello, sign in</span>
+        <span className="text-sm font-bold">Account & List </span>
+      </div>
     </div>
   );
 }

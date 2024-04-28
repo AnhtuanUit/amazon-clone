@@ -4,10 +4,10 @@ import Logo from "./Logo";
 function Footer() {
   return (
     <footer className="flex flex-col text-white">
-      <button className="bg-light-blue hover:bg-hover-light-blue cursor-pointer items-center py-4 text-xs">
+      <button className="hover:bg-me-darkblue-100 bg-me-darkblue-200 cursor-pointer items-center py-4 text-xs">
         Back to top
       </button>
-      <div className="bg-dark-slate-blue  flex gap-1 border-b border-gray-700 py-10">
+      <div className="bg-me-darkblue-300  flex gap-1 border-b border-gray-700 py-10">
         <div className="flex-cols-4 mx-auto  flex w-[1000px] justify-between">
           <ul className="flex flex-col gap-1 p-2">
             <li>
@@ -164,7 +164,7 @@ function Footer() {
           </ul>
         </div>
       </div>
-      <div className="bg-dark-slate-blue">
+      <div className="bg-me-darkblue-400">
         <div className="mx-auto  flex w-[1000px] items-center justify-center gap-1 py-4">
           <Logo className="py-6" />
           <div className="ml-16 mt-3 flex gap-2 self-start">

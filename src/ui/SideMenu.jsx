@@ -7,9 +7,11 @@ function SideMenu({ isOpen, onCloseMenu }) {
       {isOpen && (
         <div
           onClick={onCloseMenu}
-          className="fixed h-screen w-full bg-black opacity-70 transition-opacity"
+          className="fixed h-screen w-full bg-[#000000b3]"
         >
-          <HiOutlineXMark className="ml-80 h-8 w-8 text-white  transition-opacity" />
+          <div className="ml-3 mt-3">
+            <HiOutlineXMark className="ml-80 h-8 w-8 text-white" />
+          </div>
         </div>
       )}
 
@@ -35,6 +37,8 @@ function SideMenu({ isOpen, onCloseMenu }) {
           <NavLink to="/orders" onClick={onCloseMenu}>
             Orders
           </NavLink>
+          <NavLink to="/login">Login</NavLink>
+          <NavLink to="/signup">Signup</NavLink>
         </ul>
       </aside>
     </>

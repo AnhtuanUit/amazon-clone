@@ -1,3 +1,133 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Amazon Ember", Arial, sans-serif;
+  }
+
+  header *:focus {
+    @apply ring-me-orange-200 outline-none ring-2 ring-offset-0;
+  }
+
+  @font-face {
+    font-family: "Amazon Ember";
+    src:
+      url("fonts/ember/AmazonEmber-MediumItalic.woff2") format("woff2"),
+      url("fonts/ember/AmazonEmber-MediumItalic.woff") format("woff");
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Amazon Ember";
+    src:
+      url("fonts/ember/AmazonEmber-Bold.woff2") format("woff2"),
+      url("fonts/ember/AmazonEmber-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Amazon Ember";
+    src:
+      url("fonts/ember/AmazonEmber-Medium.woff2") format("woff2"),
+      url("fonts/ember/AmazonEmber-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Amazon Ember";
+    src:
+      url("fonts/ember/AmazonEmber-Heavy.woff2") format("woff2"),
+      url("fonts/ember/AmazonEmber-Heavy.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Amazon Ember";
+    src:
+      url("fonts/ember/AmazonEmber-Light.woff2") format("woff2"),
+      url("fonts/ember/AmazonEmber-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Amazon Ember";
+    src:
+      url("fonts/ember/AmazonEmber-HeavyItalic.woff2") format("woff2"),
+      url("fonts/ember/AmazonEmber-HeavyItalic.woff") format("woff");
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Amazon Ember";
+    src:
+      url("fonts/ember/AmazonEmber-BoldItalic.woff2") format("woff2"),
+      url("fonts/ember/AmazonEmber-BoldItalic.woff") format("woff");
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Amazon Ember";
+    src:
+      url("fonts/ember/AmazonEmber-Thin.woff2") format("woff2"),
+      url("fonts/ember/AmazonEmber-Thin.woff") format("woff");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Amazon Ember";
+    src:
+      url("fonts/ember/AmazonEmber-ThinItalic.woff2") format("woff2"),
+      url("fonts/ember/AmazonEmber-ThinItalic.woff") format("woff");
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Amazon Ember";
+    src:
+      url("fonts/ember/AmazonEmber-Italic.woff2") format("woff2"),
+      url("fonts/ember/AmazonEmber-Italic.woff") format("woff");
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Amazon Ember";
+    src:
+      url("fonts/ember/AmazonEmber-Regular.woff2") format("woff2"),
+      url("fonts/ember/AmazonEmber-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Amazon Ember";
+    src:
+      url("fonts/ember/AmazonEmber-LightItalic.woff2") format("woff2"),
+      url("fonts/ember/AmazonEmber-LightItalic.woff") format("woff");
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+  }
+}
