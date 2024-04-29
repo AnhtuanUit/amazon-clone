@@ -59,7 +59,7 @@ function SearchBox({ className }) {
         <input
           type="text"
           placeholder="Search Amazon"
-          className="placeholder:text-me-gray-450 grow rounded-none p-2 text-[15px] outline-none [-webkit-appearance:none] [-webkit-border-radius:0]"
+          className="placeholder:text-me-gray-450 grow p-2 text-[15px] outline-none"
           onFocus={toggleCustomSearchInputOutline}
           onBlur={toggleCustomSearchInputOutline}
         />
