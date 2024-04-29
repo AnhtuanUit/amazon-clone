@@ -1,11 +1,9 @@
 import LogoBase from "../LogoBase";
 
-function CartIcon({ number = 0, className }) {
-  const combineClass = `relative ${className}`;
-  
+function CartIcon({ number = 0 }) {
   return (
-    <div className={combineClass}>
-      <span className="absolute left-[17px] top-[-2px] text-base font-bold leading-none text-[#f08804] ">
+    <div className="relative">
+      <span className="absolute left-[17px] top-[-2px] text-base font-bold leading-none text-[#f08804]">
         {number}
       </span>
       <LogoBase logoName="cart" />
