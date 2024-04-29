@@ -9,8 +9,10 @@ export default {
           gray: {
             100: "#e2e6e6",
             200: "#e6e6e6",
+            250: "#ddd",
             300: "#ccc",
             400: "#a7acb2",
+            430: "#999",
             450: "#6f7373",
             500: "#565959",
           },
@@ -51,7 +53,6 @@ export default {
           "url('https://m.media-amazon.com/images/G/01/gno/sprites/nav-sprite-global-2x-reorg-privacy._CB587940754_.png')",
         "flag-pattern":
           "url('https://m.media-amazon.com/images/S/sash/Jls8KSxf2o8RQVi.png')",
-        "flag-sprite": "url('/images/flag-sprite-global.png')",
         "flag-sprite": "url('/images/flag-sprite-global.png')",
         "global-sprite": "url('/images/nav-sprite-global.png')",
       },

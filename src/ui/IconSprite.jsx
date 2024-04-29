@@ -12,7 +12,7 @@ function IconSprite({ name, className, ...props }) {
   };
 
   const styles = name.startsWith("flag-") ? flagStyles : globalStyles;
-  console.log(styles, name, name.startsWith("flag-"));
+
   const bgStyle = name.startsWith("flag-")
     ? "bg-flag-sprite"
     : "bg-global-sprite";

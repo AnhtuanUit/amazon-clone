@@ -1,0 +1,110 @@
+export const section1 = {
+  "Get to Know Us": [
+    { text: "Careers", href: "#" },
+    { text: "Blog", href: "#" },
+    { text: "About Amazon", href: "#" },
+    { text: "Investor Relations", href: "#" },
+    { text: "Amazon Devices", href: "#" },
+    { text: "Amazon Science", href: "#" },
+  ],
+  "Make Money with Us": [
+    { text: "Sell products on Amazon", href: "#" },
+    { text: "Sell on Amazon Business", href: "#" },
+    { text: "Sell apps on Amazon", href: "#" },
+    { text: "Become an Affiliate", href: "#" },
+    { text: "Advertise Your Products", href: "#" },
+    { text: "Self-Publish with Us", href: "#" },
+    { text: "Host an Amazon Hub", href: "#" },
+    { text: "See More Make Money with Us", href: "#", textWrap: true },
+  ],
+  "Amazon Payment Products": [
+    { text: "Amazon Business Card", href: "#" },
+    { text: "Shop with Points", href: "#" },
+    { text: "Reload Your Balance", href: "#" },
+    { text: "Amazon Currency Converter", href: "#" },
+  ],
+  "Let Us Help You": [
+    { text: "Amazon and COVID-19", href: "#", textWrap: true },
+    { text: "Your Account", href: "#" },
+    { text: "Your Orders", href: "#" },
+    { text: "Shipping Rates & Policies", href: "#", textWrap: true },
+    { text: "Returns & Replacements", href: "#", textWrap: true },
+    { text: "Manage Your Content and Devices", href: "#", textWrap: true },
+    { text: "Amazon Assistant", href: "#" },
+    { text: "Help", href: "#" },
+  ],
+};
+
+export const section2 = [
+  { href: "#", title: "Amazon Music", more: "Stream millions of songs" },
+  {
+    href: "#",
+    title: "Amazon Ads ",
+    more: "Reach customers wherever they spend their time",
+  },
+  { href: "#", title: "6pm", more: "Score deals on fashion brands" },
+  { href: "#", title: "AbeBooks", more: "Books, art & collectibles" },
+  { href: "#", title: "ACX", more: "Audiobook Publishing Made Easy" },
+  { href: "#", title: "Sell on Amazon", more: "Start a Selling Account" },
+  { href: "#", title: "Amazon Business", more: "Everything For Your Business" },
+  { href: "#", title: "AmazonGlobal", more: "Ship Orders Internationally" },
+  {
+    href: "#",
+    title: "Home Services ",
+    more: "Experienced Pros Happiness Guarantee",
+  },
+  {
+    href: "#",
+    title: "Amazon Web Services ",
+    more: "Scalable Cloud Computing Services",
+  },
+  {
+    href: "#",
+    title: "Audible ",
+    more: "Listen to Books & Original Audio Performances",
+  },
+  { href: "#", title: "Box Office Mojo", more: "Find Movie Box Office Data" },
+  { href: "#", title: "Goodreads", more: "Book reviews & recommendations" },
+  { href: "#", title: "IMDb", more: "Movies, TV & Celebrities" },
+  {
+    href: "#",
+    title: "IMDbPro ",
+    more: "Get Info Entertainment Professionals Need",
+  },
+  {
+    href: "#",
+    title: "Kindle Direct Publishing ",
+    more: "Indie Digital & Print Publishing Made Easy",
+  },
+  {
+    href: "#",
+    title: "Prime Video Direct ",
+    more: "Video Distribution Made Easy",
+  },
+  { href: "#", title: "Shopbop", more: "Designer Fashion Brands" },
+  { href: "#", title: "Woot!", more: "Deals and Shenanigans" },
+  { href: "#", title: "Zappos", more: "Shoes & Clothing" },
+  { href: "#", title: "Ring", more: "Smart Home Security Systems" },
+  { href: "#", title: "", more: "" },
+  { href: "#", title: "eero WiFi", more: "Stream 4K Video in Every Room" },
+  { href: "#", title: "Blink", more: "Smart Security for Every Home" },
+  {
+    href: "#",
+    title: "Neighbors App",
+    more: "Real-Time Crime & Safety Alerts",
+  },
+  {
+    href: "#",
+    title: "Amazon Subscription Boxes ",
+    more: "Top subscription boxes – right to your door",
+    className: "w-[135px]",
+  },
+  { href: "#", title: "PillPack", more: "Pharmacy Simplified" },
+];
+
+export const section3 = [
+  { title: "Conditions of Use", href: "#" },
+  { title: "Privacy Notice", href: "#" },
+  { title: "Consumer Health Data Privacy Disclosure", href: "#" },
+  { title: "Your Ads Privacy Choices", href: "#" },
+];

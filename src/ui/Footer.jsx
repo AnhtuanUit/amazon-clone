@@ -1,182 +1,72 @@
 import FlagBase from "./FlagBase";
 import Logo from "./Logo";
+import { section1, section2, section3 } from "@src/data/footerData";
+
+function ItemSection1({ data }) {
+  return (
+    <li className={data.textWrap ? "text-wrap" : "text-nowrap"}>
+      <a
+        href={data.href}
+        className="text-me-gray-250 inline-block text-sm leading-4 hover:underline"
+      >
+        {data.text}
+      </a>
+    </li>
+  );
+}
+
+function ColumSection1({ column }) {
+  return (
+    <div key={column}>
+      <div className="text-nowrap px-2 text-base font-bold">{column}</div>
+      <ul className="flex flex-1 flex-col gap-1 p-2">
+        {section1[column].map((data, i) => (
+          <ItemSection1 key={i} data={data} />
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function ItemSection2({ data }) {
+  return (
+    <li className={data.className}>
+      <a href={data.href} className="flex flex-col hover:underline">
+        <strong className="text-xs font-medium">{data.title}</strong>
+        <span className="text-me-430 text-xs font-medium">{data.more}</span>
+      </a>
+    </li>
+  );
+}
 
 function Footer() {
   return (
     <footer className="flex flex-col text-white">
-      <button className="hover:bg-me-darkblue-100 bg-me-darkblue-200 cursor-pointer items-center py-4 text-xs">
+      <button className="cursor-pointer items-center bg-me-darkblue-200 py-4 text-xs hover:bg-me-darkblue-100">
         Back to top
       </button>
-      <div className="bg-me-darkblue-300  flex gap-1 border-b border-gray-700 py-10">
-        <div className="flex-cols-4 mx-auto  flex w-[1000px] justify-between">
-          <ul className="flex flex-col gap-1 p-2">
-            <li>
-              <span className="font-bold">Get to Know Us</span>
-            </li>
-            <li>
-              <a href="#" className="text-sm text-[#ddd]">
-                Careers
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-sm text-[#ddd]">
-                Blog
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-sm text-[#ddd]">
-                About Amazon
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-sm text-[#ddd]">
-                Investor Relations
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-sm text-[#ddd]">
-                Amazon Devices
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-sm text-[#ddd]">
-                Amazon Science
-              </a>
-            </li>
-          </ul>
-          <ul className="flex flex-col gap-1 p-2">
-            <li>
-              <span className="font-bold">Make Money with Us</span>
-            </li>
 
-            <li>
-              <a href="#" className="text-sm text-[#ddd]">
-                Sell products on Amazon
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-sm text-[#ddd]">
-                Sell on Amazon Business
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-sm text-[#ddd]">
-                Sell apps on Amazon
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-sm text-[#ddd]">
-                Become an Affiliate
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-sm text-[#ddd]">
-                Advertise Your Products
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-sm text-[#ddd]">
-                Self-Publish with Us
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-sm text-[#ddd]">
-                Host an Amazon Hub
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-sm text-[#ddd]">
-                See More Make Money with Us
-              </a>
-            </li>
-          </ul>
-          <ul className="flex flex-col gap-1 p-2">
-            <li>
-              <span className="font-bold">Amazon Payment Products</span>
-            </li>
-            <li>
-              <a href="#" className="text-sm text-[#ddd]">
-                Amazon Business Card
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-sm text-[#ddd]">
-                Shop with Points
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-sm text-[#ddd]">
-                Reload Your Balance
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-sm text-[#ddd]">
-                Amazon Currency Converter
-              </a>
-            </li>
-          </ul>
-          <ul className="flex flex-col gap-1 p-2">
-            <li>
-              <span href="#" className="font-bold">
-                Let Us Help You
-              </span>
-            </li>
-            <li>
-              <a href="#" className="text-sm text-[#ddd]">
-                Amazon and COVID-19
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-sm text-[#ddd]">
-                Your Account
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-sm text-[#ddd]">
-                Your Orders
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-sm text-[#ddd]">
-                Shipping Rates & Policies
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-sm text-[#ddd]">
-                Returns & Replacements
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-sm text-[#ddd]">
-                Manage Your Content and Devices
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-sm text-[#ddd]">
-                Amazon Assistant
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-sm text-[#ddd]">
-                Help
-              </a>
-            </li>
-          </ul>
+      <section className="flex gap-1 border-b border-gray-700 bg-me-darkblue-300 py-10">
+        <div className="flex-cols-4 mx-auto  flex w-[1000px] justify-between gap-x-[105px]">
+          {Object.keys(section1).map((column, i) => (
+            <ColumSection1 key={i} column={column} />
+          ))}
         </div>
-      </div>
-      <div className="bg-me-darkblue-400">
+      </section>
+
+      <section className="bg-me-darkblue-400">
         <div className="mx-auto  flex w-[1000px] items-center justify-center gap-1 py-4">
           <Logo className="py-6" />
           <div className="ml-16 mt-3 flex gap-2 self-start">
-            <div className="flex cursor-pointer items-center rounded-sm border border-[#ddd]">
+            <div className="border-me-gray-250 flex cursor-pointer items-center rounded-sm border">
               <span className="px-2 py-2 text-xs  leading-none">English</span>
             </div>
-            <div className="flex cursor-pointer items-center rounded-sm border border-[#ddd]">
+            <div className="border-me-gray-250 flex cursor-pointer items-center rounded-sm border">
               <span className="px-2 py-2 text-xs  leading-none">
                 VND - Vietnamese Dong
               </span>
             </div>
-            <div className="flex cursor-pointer items-center rounded-sm border border-[#ddd]">
+            <div className="border-me-gray-250 flex cursor-pointer items-center rounded-sm border">
               <div className="pl-[8px]">
                 <FlagBase iconName="en" />
               </div>
@@ -186,241 +76,30 @@ function Footer() {
             </div>
           </div>
         </div>
-      </div>
-      <div className="bg-me-darkblue-400">
-        <ul className="mx-auto grid w-[1000px] grid-cols-7 gap-y-4  p-2 py-7">
-          <li>
-            <a href="#" className="flex flex-col">
-              <strong className="text-xs font-medium">Amazon Music</strong>
-              <span className="text-xs font-medium text-[#999]">
-                Stream millions of songs
-              </span>
-            </a>
-          </li>
-          <li>
-            <a href="#" className="flex flex-col">
-              <strong className="text-xs font-medium">Amazon Music</strong>
-              <span className="text-xs font-medium text-[#999]">
-                Stream millions of songs
-              </span>
-            </a>
-          </li>
-          <li>
-            <a href="#" className="flex flex-col">
-              <strong className="text-xs font-medium">Amazon Music</strong>
-              <span className="text-xs font-medium text-[#999]">
-                Stream millions of songs
-              </span>
-            </a>
-          </li>
-          <li>
-            <a href="#" className="flex flex-col">
-              <strong className="text-xs font-medium">Amazon Music</strong>
-              <span className="text-xs font-medium text-[#999]">
-                Stream millions of songs
-              </span>
-            </a>
-          </li>
-          <li>
-            <a href="#" className="flex flex-col">
-              <strong className="text-xs font-medium">Amazon Music</strong>
-              <span className="text-xs font-medium text-[#999]">
-                Stream millions of songs
-              </span>
-            </a>
-          </li>
-          <li>
-            <a href="#" className="flex flex-col">
-              <strong className="text-xs font-medium">Amazon Music</strong>
-              <span className="text-xs font-medium text-[#999]">
-                Stream millions of songs
-              </span>
-            </a>
-          </li>
-          <li>
-            <a href="#" className="flex flex-col">
-              <strong className="text-xs font-medium">Amazon Music</strong>
-              <span className="text-xs font-medium text-[#999]">
-                Stream millions of songs
-              </span>
-            </a>
-          </li>
-          <li>
-            <a href="#" className="flex flex-col">
-              <strong className="text-xs font-medium">Amazon Music</strong>
-              <span className="text-xs font-medium text-[#999]">
-                Stream millions of songs
-              </span>
-            </a>
-          </li>
-          <li>
-            <a href="#" className="flex flex-col">
-              <strong className="text-xs font-medium">Amazon Music</strong>
-              <span className="text-xs font-medium text-[#999]">
-                Stream millions of songs
-              </span>
-            </a>
-          </li>
-          <li>
-            <a href="#" className="flex flex-col">
-              <strong className="text-xs font-medium">Amazon Music</strong>
-              <span className="text-xs font-medium text-[#999]">
-                Stream millions of songs
-              </span>
-            </a>
-          </li>
-          <li>
-            <a href="#" className="flex flex-col">
-              <strong className="text-xs font-medium">Amazon Music</strong>
-              <span className="text-xs font-medium text-[#999]">
-                Stream millions of songs
-              </span>
-            </a>
-          </li>
-          <li>
-            <a href="#" className="flex flex-col">
-              <strong className="text-xs font-medium">Amazon Music</strong>
-              <span className="text-xs font-medium text-[#999]">
-                Stream millions of songs
-              </span>
-            </a>
-          </li>
-          <li>
-            <a href="#" className="flex flex-col">
-              <strong className="text-xs font-medium">Amazon Music</strong>
-              <span className="text-xs font-medium text-[#999]">
-                Stream millions of songs
-              </span>
-            </a>
-          </li>
-          <li>
-            <a href="#" className="flex flex-col">
-              <strong className="text-xs font-medium">Amazon Music</strong>
-              <span className="text-xs font-medium text-[#999]">
-                Stream millions of songs
-              </span>
-            </a>
-          </li>
-          <li>
-            <a href="#" className="flex flex-col">
-              <strong className="text-xs font-medium">Amazon Music</strong>
-              <span className="text-xs font-medium text-[#999]">
-                Stream millions of songs
-              </span>
-            </a>
-          </li>
-          <li>
-            <a href="#" className="flex flex-col">
-              <strong className="text-xs font-medium">Amazon Music</strong>
-              <span className="text-xs font-medium text-[#999]">
-                Stream millions of songs
-              </span>
-            </a>
-          </li>
-          <li>
-            <a href="#" className="flex flex-col">
-              <strong className="text-xs font-medium">Amazon Music</strong>
-              <span className="text-xs font-medium text-[#999]">
-                Stream millions of songs
-              </span>
-            </a>
-          </li>
-          <li>
-            <a href="#" className="flex flex-col">
-              <strong className="text-xs font-medium">Amazon Music</strong>
-              <span className="text-xs font-medium text-[#999]">
-                Stream millions of songs
-              </span>
-            </a>
-          </li>
-          <li>
-            <a href="#" className="flex flex-col">
-              <strong className="text-xs font-medium">Amazon Music</strong>
-              <span className="text-xs font-medium text-[#999]">
-                Stream millions of songs
-              </span>
-            </a>
-          </li>
-          <li>
-            <a href="#" className="flex flex-col">
-              <strong className="text-xs font-medium">Amazon Music</strong>
-              <span className="text-xs font-medium text-[#999]">
-                Stream millions of songs
-              </span>
-            </a>
-          </li>
-          <li>
-            <a href="#" className="flex flex-col">
-              <strong className="text-xs font-medium">Amazon Music</strong>
-              <span className="text-xs font-medium text-[#999]">
-                Stream millions of songs
-              </span>
-            </a>
-          </li>
-          <li />
-          <li>
-            <a href="#" className="flex flex-col">
-              <strong className="text-xs font-medium">Amazon Music</strong>
-              <span className="text-xs font-medium text-[#999]">
-                Stream millions of songs
-              </span>
-            </a>
-          </li>
-          <li>
-            <a href="#" className="flex flex-col">
-              <strong className="text-xs font-medium">Amazon Music</strong>
-              <span className="text-xs font-medium text-[#999]">
-                Stream millions of songs
-              </span>
-            </a>
-          </li>
-          <li>
-            <a href="#" className="flex flex-col">
-              <strong className="text-xs font-medium">Amazon Music</strong>
-              <span className="text-xs font-medium text-[#999]">
-                Stream millions of songs
-              </span>
-            </a>
-          </li>
-          <li>
-            <a href="#" className="flex flex-col">
-              <strong className="text-xs font-medium">Amazon Music</strong>
-              <span className="text-xs font-medium text-[#999]">
-                Stream millions of songs
-              </span>
-            </a>
-          </li>
-          <li>
-            <a href="#" className="flex flex-col">
-              <strong className="text-xs font-medium">Amazon Music</strong>
-              <span className="text-xs font-medium text-[#999]">
-                Stream millions of songs
-              </span>
-            </a>
-          </li>
+      </section>
+
+      <section className="bg-me-darkblue-400">
+        <ul className="mx-auto grid w-[1000px] grid-cols-7 gap-x-[46px] gap-y-4  p-2 py-7">
+          {section2.map((item, i) => (
+            <ItemSection2 key={i} data={item} />
+          ))}
         </ul>
-      </div>
-      <div className="bg-me-darkblue-400">
-        <div className="text-[#ddd mx-auto flex w-[1000px] flex-col items-center gap-2 py-4">
+      </section>
+
+      <section className="bg-me-darkblue-400">
+        <div className="text-me-gray-250 mx-auto flex w-[1000px] flex-col items-center gap-2 py-4">
           <div className="flex items-center justify-center gap-4">
-            <a href="#" className="text-xs font-medium">
-              Conditions of Use
-            </a>
-            <a href="#" className="text-xs font-medium">
-              Privacy Notice
-            </a>
-            <a href="#" className="text-xs font-medium">
-              Consumer Health Data Privacy Disclosure
-            </a>
-            <a href="#" className="text-xs font-medium">
-              Your Ads Privacy Choices
-            </a>
+            {section3.map((item, i) => (
+              <a href={item.href} key={i} className="text-xs font-medium">
+                {item.title}
+              </a>
+            ))}
           </div>
           <span className="text-xs font-medium">
             © 1996-2024, Amazon.com, Inc. or its affiliates
           </span>
         </div>
-      </div>
+      </section>
     </footer>
   );
 }
