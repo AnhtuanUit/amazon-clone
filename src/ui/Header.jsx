@@ -83,7 +83,6 @@ function Header({ onOpenMenu }) {
         <BottomNavItem text="Browsing History" arrowDown={true} />
         <BottomNavItem text="Registry" />
         <BottomNavItem text="Gift Cards" />
-        <a></a>
       </ul>
     </header>
   );

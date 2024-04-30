@@ -4,7 +4,7 @@ function IconSprite({ name, className, ...props }) {
     "2x-location": "w-[15px] h-[18px] bg-[length:350px] bg-[-71px_-378px]",
     "2x-search": "w-[45px] h-[40px] bg-[length:350px] bg-[2px_-280px]",
     "2x-cart": "w-[38px] h-[26px] bg-[length:350px] bg-[-10px_-340px]",
-    "2x-profile": "w-[25px] h-[27px] bg-[length:350px] bg-[-137px_-340px]",
+    "2x-profile": "w-[25px] h-[27px] bg-[length:350px] bg-[-137px_-339px]",
     "2x-arrow-right": "w-[10px] h-[14px] bg-[length:350px] bg-[-137px_-288px]",
   };
 
@@ -14,7 +14,7 @@ function IconSprite({ name, className, ...props }) {
   };
 
   const flagStyles = {
-    "flag-en": "w-[24px] h-[18px] bg-[length:194px_295px] bg-[0px_-130px]",
+    "flag-en": "w-[24px] h-[18px] bg-[length:194px_295px] bg-[0px_-129px]",
     "flag-vn": "w-[15px] h-[18px] bg-[length:350px] bg-[-71px_-378px]",
     "flag-globe": "w-[15px] h-[15px] bg-[length:194px_295px] bg-[-77px_-24px]",
     "flag-up-down-arrow":
