@@ -61,7 +61,7 @@ function Footer() {
         Back to top
       </button>
 
-      <section className="flex gap-1 border-b border-gray-700 bg-me-darkblue-300 py-10">
+      <section className="flex gap-1 border-b border-gray-700 bg-me-darkblue-300 px-2 py-10">
         <div className="flex-cols-4 mx-auto  flex w-[1000px] justify-between gap-x-[105px]">
           {Object.keys(section1).map((column, i) => (
             <ColumSection1 key={i} column={column} />
@@ -84,7 +84,7 @@ function Footer() {
         </div>
       </section>
 
-      <section className="bg-me-darkblue-400">
+      <section className="bg-me-darkblue-400 px-2">
         <ul className="mx-auto grid w-[1000px] grid-cols-7 gap-x-[46px] gap-y-4  p-2 py-7">
           {section2.map((item, i) => (
             <ItemSection2 key={i} data={item} />
