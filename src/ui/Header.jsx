@@ -1,7 +1,36 @@
-import { HiOutlineBars3 } from "react-icons/hi2";
 import SearchBox from "./SearchBox";
 import NavItem from "./NavItem";
 import IconSprite from "./IconSprite";
+import IconArrowDown from "./IconArrowDown";
+
+function BottomNavItem({ children, text, arrowDown = false, className }) {
+  return (
+    <li
+      className={`flex items-center rounded-[3px] border border-transparent px-0.5 text-sm text-white hover:border-white ${className}`}
+    >
+      {text && (
+        <a
+          href="#"
+          className="flex items-center gap-x-1 px-2 py-1.5 hover:ring-0"
+        >
+          <span>{text}</span>
+          {arrowDown && <IconArrowDown />}
+        </a>
+      )}
+      {children}
+    </li>
+  );
+}
+
+function ThreeDotsIcon() {
+  return (
+    <div className="flex flex-col gap-1">
+      <div className="h-[2px] w-4 bg-white" />
+      <div className="h-[2px] w-4 bg-white" />
+      <div className="h-[2px] w-4 bg-white" />
+    </div>
+  );
+}
 
 function Header({ onOpenMenu }) {
   return (
@@ -36,42 +65,24 @@ function Header({ onOpenMenu }) {
       </nav>
 
       <ul className="flex bg-[#232f3e] pb-[1px]">
-        <li
-          className="flex items-center rounded-[3px] border border-transparent px-0.5 py-0.5 text-sm text-white hover:border-white
-            "
-        >
+        <BottomNavItem className="ml-2.5 py-0.5">
           <button
-            className="flex items-center gap-x-1 px-3.5 py-1.5 hover:ring-0"
+            className="flex items-center gap-x-1 px-2 py-1.5 hover:ring-0"
             onClick={() => onOpenMenu()}
           >
-            <div className="flex flex-col gap-1">
-              <div className="h-[2px] w-4 bg-white" />
-              <div className="h-[2px] w-4 bg-white" />
-              <div className="h-[2px] w-4 bg-white" />
-            </div>
+            <ThreeDotsIcon />
             <span>All</span>
           </button>
-        </li>
-        {[
-          "Today's Deals",
-          "Buy Again",
-          "Do's Amazon.com",
-          "Customer Service",
-          "Sell",
-          "Browsing History",
-          "Registry",
-          "Gift Cards",
-        ].map((item, i) => (
-          <li
-            key={i}
-            className="flex items-center rounded-[3px] border border-transparent px-0.5 text-sm text-white hover:border-white"
-          >
-            <a href="#" className="px-3.5 py-1.5 hover:ring-0">
-              <span>{item}</span>
-            </a>
-          </li>
-        ))}
+        </BottomNavItem>
 
+        <BottomNavItem text="Today's Deals" />
+        <BottomNavItem text="Buy Again" />
+        <BottomNavItem text="Do's Amazon.com" />
+        <BottomNavItem text="Customer Service" />
+        <BottomNavItem text="Sell" />
+        <BottomNavItem text="Browsing History" arrowDown={true} />
+        <BottomNavItem text="Registry" />
+        <BottomNavItem text="Gift Cards" />
         <a></a>
       </ul>
     </header>
