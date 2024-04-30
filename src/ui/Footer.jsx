@@ -32,7 +32,9 @@ function ItemSection2({ data }) {
     <li className={data.className}>
       <a href={data.href} className="flex flex-col hover:underline">
         <strong className="text-xs font-medium">{data.title}</strong>
-        <span className="text-me-430 text-xs font-medium">{data.more}</span>
+        <span className="text-me-gray-430 text-xs font-medium">
+          {data.more}
+        </span>
       </a>
     </li>
   );
