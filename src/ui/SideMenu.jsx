@@ -1,40 +1,55 @@
 import { HiOutlineXMark } from "react-icons/hi2";
 import { fakeDataCategories } from "@src/data/sideMenuData";
 import IconSprite from "./IconSprite";
+import { useState } from "react";
 
-function ItemSubCategory({ subCategory }) {
+function ItemSubCategory({ subCategory, onClick }) {
   return (
-    <li className="cursor-pointer px-9 hover:bg-me-gray-200">
-      <div className="flex justify-between py-3 text-sm">
+    <li className="cursor-pointer px-9 hover:bg-me-gray-100" onClick={onClick}>
+      <div className="flex justify-between py-2.5 text-sm">
         <span>{subCategory.title}</span>
-        {subCategory.items.length && <IconSprite name="2x-arrow-right" />}
+        {subCategory?.items?.length ? (
+          <IconSprite name="2x-arrow-right" />
+        ) : (
+          false
+        )}
       </div>
     </li>
   );
 }
 
-function ItemCategory({ category }) {
+function ItemCategory({ item, onChangeCategory }) {
   return (
-    <div className="m-1 w-full py-2.5">
-      <span className="px-9 text-lg font-bold">{category.title}</span>
+    <div className="flex w-full flex-col">
+      <span className="px-9 py-2.5 text-lg font-bold">{item.title}</span>
 
       <ListSubCategory
-        subCategories={category.items}
+        list={item.items}
         render={(subCategory, i) => (
-          <ItemSubCategory key={i} subCategory={subCategory} />
+          <ItemSubCategory
+            key={i}
+            subCategory={subCategory}
+            onClick={() => {
+              onChangeCategory && onChangeCategory(subCategory);
+            }}
+          />
         )}
       />
     </div>
   );
 }
 
-function ListSubCategory({ subCategories = [], render }) {
-  return <ul className="flex flex-col">{subCategories.map(render)}</ul>;
+function ListSubCategory({ list, render }) {
+  if (!list || !list.length) return;
+  return <ul className="flex flex-col">{list.map(render)}</ul>;
 }
 
-function ListCategory({ categories, render }) {
+function ListCategory({ list, render, className }) {
+  if (!list || !list.length) return;
   return (
-    <div className="w-full overflow-y-scroll">{categories.map(render)}</div>
+    <div className={`mt-2 flex w-full flex-col overflow-y-scroll ${className}`}>
+      {list.map(render)}
+    </div>
   );
 }
 
@@ -47,7 +62,35 @@ function SideProfile() {
   );
 }
 
+function BackMainMenuButton({ backToCategory }) {
+  return (
+    <div className="mt-2 text-sm font-bold uppercase">
+      <div
+        className="flex items-center gap-2 px-9 py-3 hover:bg-me-gray-100"
+        onClick={backToCategory}
+      >
+        <IconSprite name="2x-arrow-left" />
+        <span>Main Menu</span>
+      </div>
+      <div className="border-t-[1px] border-me-gray-200" />
+    </div>
+  );
+}
+
 function SideMenu({ isOpen, onCloseMenu }) {
+  const [currSubCategory, setCurrentCategory] = useState(null);
+
+  const isOpenCategory = !!currSubCategory;
+
+  function handleChangeCategory(subCategory) {
+    console.log("currSubCategory", subCategory);
+    setCurrentCategory(subCategory || null);
+  }
+
+  function backToCategory() {
+    setCurrentCategory(null);
+  }
+
   return (
     <>
       <div
@@ -62,14 +105,41 @@ function SideMenu({ isOpen, onCloseMenu }) {
       <aside
         className={`fixed flex h-full w-96 ${isOpen ? "translate-x-0" : "translate-x-[-100%]"} items-center bg-white duration-500`}
       >
-        <div className="flex h-full w-full flex-col items-start">
+        <div className="flex h-full w-full flex-col items-start overflow-hidden">
           <SideProfile />
-          <ListCategory
-            categories={fakeDataCategories}
-            render={(category, i) => (
-              <ItemCategory key={i} category={category} />
-            )}
-          />
+          <div
+            className={`flex w-[200%] ${isOpenCategory ? "translate-x-[-50%]" : "translate-x-0"} overflow-hidden duration-500`}
+          >
+            <ListCategory
+              list={fakeDataCategories}
+              render={(item, i) => (
+                <div key={i}>
+                  <ItemCategory
+                    item={item}
+                    onChangeCategory={handleChangeCategory}
+                  />
+                  {fakeDataCategories?.length - 1 > i && (
+                    <div className="my-2.5 border-t-[1px] border-me-gray-200" />
+                  )}
+                </div>
+              )}
+            />
+            <div className="flex w-full flex-col overflow-y-scroll">
+              <BackMainMenuButton backToCategory={backToCategory} />
+              <ListCategory
+                className="mt-0 [overflow:unset]"
+                list={currSubCategory?.items}
+                render={(item, i) => (
+                  <div key={i}>
+                    <ItemCategory item={item} />
+                    {currSubCategory?.items.length - 1 > i && (
+                      <div className="my-2.5 border-t-[1px] border-me-gray-200" />
+                    )}
+                  </div>
+                )}
+              />
+            </div>
+          </div>
           {/* <TemparateRoutes onCloseMenu={onCloseMenu} /> */}
         </div>
       </aside>

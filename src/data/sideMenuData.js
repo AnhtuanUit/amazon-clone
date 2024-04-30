@@ -9,27 +9,27 @@ export const fakeDataCategories = [
             title: "Stream Music",
             items: [
               {
-                text: "Amazon Music Unlimited",
+                title: "Amazon Music Unlimited",
                 href: "#",
               },
               {
-                text: "Free Streaming Music",
+                title: "Free Streaming Music",
                 href: "#",
               },
               {
-                text: "Podcasts",
+                title: "Podcasts",
                 href: "#",
               },
               {
-                text: "Open Web Player",
+                title: "Open Web Player",
                 href: "#",
               },
               {
-                text: "Open Web Player",
+                title: "Open Web Player",
                 href: "#",
               },
               {
-                text: "Download the app",
+                title: "Download the app",
                 href: "#",
               },
             ],
@@ -43,31 +43,31 @@ export const fakeDataCategories = [
             title: "Kindle E-readers",
             items: [
               {
-                text: "Kindle Kids",
+                title: "Kindle Kids",
                 href: "#",
               },
               {
-                text: "Kindle",
+                title: "Kindle",
                 href: "#",
               },
               {
-                text: "Kindle Paperwhite Kids",
+                title: "Kindle Paperwhite Kids",
                 href: "#",
               },
               {
-                text: "Kindle Paperwhite",
+                title: "Kindle Paperwhite",
                 href: "#",
               },
               {
-                text: "Kindle Scribe",
+                title: "Kindle Scribe",
                 href: "#",
               },
               {
-                text: "Accessories",
+                title: "Accessories",
                 href: "#",
               },
               {
-                text: "See all Kindle E-Readers",
+                title: "See all Kindle E-Readers",
                 href: "#",
               },
             ],
@@ -76,19 +76,19 @@ export const fakeDataCategories = [
             title: "Kindle Store",
             items: [
               {
-                text: "Kindle Books",
+                title: "Kindle Books",
                 href: "#",
               },
               {
-                text: "Kindle Unlimited",
+                title: "Kindle Unlimited",
                 href: "#",
               },
               {
-                text: "Prime Reading",
+                title: "Prime Reading",
                 href: "#",
               },
               {
-                text: "Kindle Vella",
+                title: "Kindle Vella",
                 href: "#",
               },
             ],
@@ -97,19 +97,19 @@ export const fakeDataCategories = [
             title: "Apps & Resources",
             items: [
               {
-                text: "Free Kindle Reading Apps",
+                title: "Free Kindle Reading Apps",
                 href: "#",
               },
               {
-                text: "Kindle for Web",
+                title: "Kindle for Web",
                 href: "#",
               },
               {
-                text: "Manage Your Content and Devices",
+                title: "Manage Your Content and Devices",
                 href: "#",
               },
               {
-                text: "Trade-In",
+                title: "Trade-In",
                 href: "#",
               },
             ],
@@ -123,27 +123,27 @@ export const fakeDataCategories = [
             title: "Amazon Appstore",
             items: [
               {
-                text: "All Apps and Games",
+                title: "All Apps and Games",
                 href: "#",
               },
               {
-                text: "Games",
+                title: "Games",
                 href: "#",
               },
               {
-                text: "Amazon Coins",
+                title: "Amazon Coins",
                 href: "#",
               },
               {
-                text: "Download Amazon Appstore",
+                title: "Download Amazon Appstore",
                 href: "#",
               },
               {
-                text: "Amazon Apps",
+                title: "Amazon Apps",
                 href: "#",
               },
               {
-                text: "Your Apps and Subscriptions",
+                title: "Your Apps and Subscriptions",
                 href: "#",
               },
             ],
@@ -162,71 +162,71 @@ export const fakeDataCategories = [
             title: "Electronics",
             items: [
               {
-                text: "Accessories & Supplies",
+                title: "Accessories & Supplies",
                 href: "#",
               },
               {
-                text: "Camera & Photo",
+                title: "Camera & Photo",
                 href: "#",
               },
               {
-                text: "Car & Vehicle Electronics",
+                title: "Car & Vehicle Electronics",
                 href: "#",
               },
               {
-                text: "Cell Phones & Accessories",
+                title: "Cell Phones & Accessories",
                 href: "#",
               },
               {
-                text: "Computers & Accessories",
+                title: "Computers & Accessories",
                 href: "#",
               },
               {
-                text: "GPS & Navigation",
+                title: "GPS & Navigation",
                 href: "#",
               },
               {
-                text: "Headphones",
+                title: "Headphones",
                 href: "#",
               },
               {
-                text: "Home Audio",
+                title: "Home Audio",
                 href: "#",
               },
               {
-                text: "Office Electronics",
+                title: "Office Electronics",
                 href: "#",
               },
               {
-                text: "Portable Audio & Video",
+                title: "Portable Audio & Video",
                 href: "#",
               },
               {
-                text: "Security & Surveillance",
+                title: "Security & Surveillance",
                 href: "#",
               },
               {
-                text: "Service Plans",
+                title: "Service Plans",
                 href: "#",
               },
               {
-                text: "Television & Video",
+                title: "Television & Video",
                 href: "#",
               },
               {
-                text: "Video Game Consoles & Accessories",
+                title: "Video Game Consoles & Accessories",
                 href: "#",
               },
               {
-                text: "Video Projectors",
+                title: "Video Projectors",
                 href: "#",
               },
               {
-                text: "Wearable Technology",
+                title: "Wearable Technology",
                 href: "#",
               },
               {
-                text: "eBook Readers & Accessories",
+                title: "eBook Readers & Accessories",
                 href: "#",
               },
             ],
@@ -240,63 +240,63 @@ export const fakeDataCategories = [
             title: "Computers",
             items: [
               {
-                text: "Computer Accessories & Peripherals",
+                title: "Computer Accessories & Peripherals",
                 href: "#",
               },
               {
-                text: "Computer Components",
+                title: "Computer Components",
                 href: "#",
               },
               {
-                text: "Computers & Tablets",
+                title: "Computers & Tablets",
                 href: "#",
               },
               {
-                text: "Data Storage",
+                title: "Data Storage",
                 href: "#",
               },
               {
-                text: "External Components",
+                title: "External Components",
                 href: "#",
               },
               {
-                text: "Laptop Accessories",
+                title: "Laptop Accessories",
                 href: "#",
               },
               {
-                text: "Monitors",
+                title: "Monitors",
                 href: "#",
               },
               {
-                text: "Networking Products",
+                title: "Networking Products",
                 href: "#",
               },
               {
-                text: "Power Strips & Surge Protectors",
+                title: "Power Strips & Surge Protectors",
                 href: "#",
               },
               {
-                text: "Printers",
+                title: "Printers",
                 href: "#",
               },
               {
-                text: "Scanners",
+                title: "Scanners",
                 href: "#",
               },
               {
-                text: "Servers",
+                title: "Servers",
                 href: "#",
               },
               {
-                text: "Tablet Accessories",
+                title: "Tablet Accessories",
                 href: "#",
               },
               {
-                text: "Tablet Replacement Parts",
+                title: "Tablet Replacement Parts",
                 href: "#",
               },
               {
-                text: "Warranties & Services",
+                title: "Warranties & Services",
                 href: "#",
               },
             ],
@@ -310,71 +310,71 @@ export const fakeDataCategories = [
             title: "Smart Home",
             items: [
               {
-                text: "Amazon Smart Home",
+                title: "Amazon Smart Home",
                 href: "#",
               },
               {
-                text: "Works with Alexa Devices",
+                title: "Works with Alexa Devices",
                 href: "#",
               },
               {
-                text: "Smart Home Lighting",
+                title: "Smart Home Lighting",
                 href: "#",
               },
               {
-                text: "Smart Locks and Entry",
+                title: "Smart Locks and Entry",
                 href: "#",
               },
               {
-                text: "Security Cameras and Systems",
+                title: "Security Cameras and Systems",
                 href: "#",
               },
               {
-                text: "Plugs and Outlets",
+                title: "Plugs and Outlets",
                 href: "#",
               },
               {
-                text: "New Smart Devices",
+                title: "New Smart Devices",
                 href: "#",
               },
               {
-                text: "Heating and Cooling",
+                title: "Heating and Cooling",
                 href: "#",
               },
               {
-                text: "Detectors and Sensors",
+                title: "Detectors and Sensors",
                 href: "#",
               },
               {
-                text: "Home Entertainment",
+                title: "Home Entertainment",
                 href: "#",
               },
               {
-                text: "Pet",
+                title: "Pet",
                 href: "#",
               },
               {
-                text: "Voice Assistants and Hubs",
+                title: "Voice Assistants and Hubs",
                 href: "#",
               },
               {
-                text: "Kitchen",
+                title: "Kitchen",
                 href: "#",
               },
               {
-                text: "Vacuums and Mops",
+                title: "Vacuums and Mops",
                 href: "#",
               },
               {
-                text: "Lawn and Garden",
+                title: "Lawn and Garden",
                 href: "#",
               },
               {
-                text: "WIFI and Networking",
+                title: "WIFI and Networking",
                 href: "#",
               },
               {
-                text: "Other Solutions",
+                title: "Other Solutions",
                 href: "h#",
               },
             ],
@@ -388,55 +388,55 @@ export const fakeDataCategories = [
             title: "Arts & Crafts",
             items: [
               {
-                text: " Painting, Drawing & Art Supplies",
+                title: " Painting, Drawing & Art Supplies",
                 href: "#",
               },
               {
-                text: " Beading & Jewelry Making",
+                title: " Beading & Jewelry Making",
                 href: "#",
               },
               {
-                text: " Crafting",
+                title: " Crafting",
                 href: "#",
               },
               {
-                text: " Fabric",
+                title: " Fabric",
                 href: "#",
               },
               {
-                text: " Fabric Decorating",
+                title: " Fabric Decorating",
                 href: "#",
               },
               {
-                text: " Knitting & Crochet",
+                title: " Knitting & Crochet",
                 href: "#",
               },
               {
-                text: " Needlework",
+                title: " Needlework",
                 href: "#",
               },
               {
-                text: " Organization, Storage & Transport",
+                title: " Organization, Storage & Transport",
                 href: "#",
               },
               {
-                text: " Printmaking",
+                title: " Printmaking",
                 href: "#",
               },
               {
-                text: " Scrapbooking & Stamping",
+                title: " Scrapbooking & Stamping",
                 href: "#",
               },
               {
-                text: " Sewing",
+                title: " Sewing",
                 href: "#",
               },
               {
-                text: " Party Decorations & Supplies",
+                title: " Party Decorations & Supplies",
                 href: "#",
               },
               {
-                text: " Gift Wrapping Supplies",
+                title: " Gift Wrapping Supplies",
                 href: "#",
               },
             ],
@@ -450,63 +450,63 @@ export const fakeDataCategories = [
             title: "Automotive",
             items: [
               {
-                text: "Car Care",
+                title: "Car Care",
                 href: "#",
               },
               {
-                text: "Car Electronics & Accessories",
+                title: "Car Electronics & Accessories",
                 href: "#",
               },
               {
-                text: "Exterior Accessories",
+                title: "Exterior Accessories",
                 href: "#",
               },
               {
-                text: "Interior Accessories",
+                title: "Interior Accessories",
                 href: "#",
               },
               {
-                text: "Lights & Lighting Accessories",
+                title: "Lights & Lighting Accessories",
                 href: "#",
               },
               {
-                text: "Motorcycle & Powersports",
+                title: "Motorcycle & Powersports",
                 href: "#",
               },
               {
-                text: "Oils & Fluids",
+                title: "Oils & Fluids",
                 href: "#",
               },
               {
-                text: "Paint & Paint Supplies",
+                title: "Paint & Paint Supplies",
                 href: "#",
               },
               {
-                text: "Performance Parts & Accessories",
+                title: "Performance Parts & Accessories",
                 href: "#",
               },
               {
-                text: "Replacement Parts",
+                title: "Replacement Parts",
                 href: "#",
               },
               {
-                text: "RV Parts & Accessories",
+                title: "RV Parts & Accessories",
                 href: "#",
               },
               {
-                text: "Tires & Wheels",
+                title: "Tires & Wheels",
                 href: "#",
               },
               {
-                text: "Tools & Equipment",
+                title: "Tools & Equipment",
                 href: "#",
               },
               {
-                text: "Automotive Enthusiast Merchandise",
+                title: "Automotive Enthusiast Merchandise",
                 href: "#",
               },
               {
-                text: "Heavy Duty & Commercial Vehicle Equipment",
+                title: "Heavy Duty & Commercial Vehicle Equipment",
                 href: "#",
               },
             ],
@@ -520,63 +520,63 @@ export const fakeDataCategories = [
             title: "Baby",
             items: [
               {
-                text: "Activity & Entertainment",
+                title: "Activity & Entertainment",
                 href: "#",
               },
               {
-                text: "Apparel & Accessories",
+                title: "Apparel & Accessories",
                 href: "#",
               },
               {
-                text: "Baby & Toddler Toys",
+                title: "Baby & Toddler Toys",
                 href: "#",
               },
               {
-                text: "Baby Care",
+                title: "Baby Care",
                 href: "#",
               },
               {
-                text: "Baby Stationery",
+                title: "Baby Stationery",
                 href: "#",
               },
               {
-                text: "Car Seats & Accessories",
+                title: "Car Seats & Accessories",
                 href: "#",
               },
               {
-                text: "Diapering",
+                title: "Diapering",
                 href: "#",
               },
               {
-                text: "Feeding",
+                title: "Feeding",
                 href: "#",
               },
               {
-                text: "Gifts",
+                title: "Gifts",
                 href: "#",
               },
               {
-                text: "Nursery",
+                title: "Nursery",
                 href: "#",
               },
               {
-                text: "Potty Training",
+                title: "Potty Training",
                 href: "#",
               },
               {
-                text: "Pregnancy & Maternity",
+                title: "Pregnancy & Maternity",
                 href: "#",
               },
               {
-                text: "Safety",
+                title: "Safety",
                 href: "#",
               },
               {
-                text: "Strollers & Accessories",
+                title: "Strollers & Accessories",
                 href: "#",
               },
               {
-                text: "Travel Gear",
+                title: "Travel Gear",
                 href: "#",
               },
             ],
@@ -590,39 +590,39 @@ export const fakeDataCategories = [
             title: "Beauty and Personal Care",
             items: [
               {
-                text: "Makeup",
+                title: "Makeup",
                 href: "#",
               },
               {
-                text: "Skin Care",
+                title: "Skin Care",
                 href: "#",
               },
               {
-                text: "Hair Care",
+                title: "Hair Care",
                 href: "#",
               },
               {
-                text: "Fragrance",
+                title: "Fragrance",
                 href: "#",
               },
               {
-                text: "Foot, Hand & Nail Care",
+                title: "Foot, Hand & Nail Care",
                 href: "#",
               },
               {
-                text: "Tools & Accessories",
+                title: "Tools & Accessories",
                 href: "#",
               },
               {
-                text: "Shave & Hair Removal",
+                title: "Shave & Hair Removal",
                 href: "#",
               },
               {
-                text: "Personal Care",
+                title: "Personal Care",
                 href: "#",
               },
               {
-                text: "Oral Care",
+                title: "Oral Care",
                 href: "#",
               },
             ],
@@ -636,27 +636,27 @@ export const fakeDataCategories = [
             title: "Women's Fashion",
             items: [
               {
-                text: "Clothing",
+                title: "Clothing",
                 href: "#",
               },
               {
-                text: "Shoes",
+                title: "Shoes",
                 href: "#",
               },
               {
-                text: "Jewelry",
+                title: "Jewelry",
                 href: "#",
               },
               {
-                text: "Watches",
+                title: "Watches",
                 href: "#",
               },
               {
-                text: "Handbags",
+                title: "Handbags",
                 href: "#",
               },
               {
-                text: "Accessories",
+                title: "Accessories",
                 href: "#",
               },
             ],
@@ -670,19 +670,19 @@ export const fakeDataCategories = [
             title: "Men's Fashion",
             items: [
               {
-                text: "Clothing",
+                title: "Clothing",
                 href: "#",
               },
               {
-                text: "Shoes",
+                title: "Shoes",
                 href: "#",
               },
               {
-                text: "Watches",
+                title: "Watches",
                 href: "#",
               },
               {
-                text: "Accessories",
+                title: "Accessories",
                 href: "#",
               },
             ],

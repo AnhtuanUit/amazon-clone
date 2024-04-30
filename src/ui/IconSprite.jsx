@@ -6,6 +6,7 @@ function IconSprite({ name, className, ...props }) {
     "2x-cart": "w-[38px] h-[26px] bg-[length:350px] bg-[-10px_-340px]",
     "2x-profile": "w-[25px] h-[27px] bg-[length:350px] bg-[-137px_-339px]",
     "2x-arrow-right": "w-[10px] h-[14px] bg-[length:350px] bg-[-137px_-288px]",
+    "2x-arrow-left": "w-[16px] h-[16px] bg-[length:350px] bg-[-137px_-308.5px]",
   };
 
   const global1xStyles = {
