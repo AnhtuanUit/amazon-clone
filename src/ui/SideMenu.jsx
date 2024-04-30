@@ -129,12 +129,13 @@ function SideMenu({ isOpen, onCloseMenu }) {
       <aside
         className={`fixed z-20 flex h-full w-96 ${isOpen ? "translate-x-0" : "translate-x-[-100%]"} items-center bg-white duration-500`}
       >
-        <div className="mb-20 flex h-full w-full flex-col items-start overflow-hidden">
+        <div className="flex h-full w-full flex-col items-start overflow-hidden">
           <SideProfile />
           <div
-            className={`flex w-[200%] ${isOpenCategory ? "translate-x-[-50%]" : "translate-x-0"} overflow-hidden duration-500`}
+            className={`flex w-[200%] ${isOpenCategory ? "translate-x-[-50%]" : "translate-x-0"} overflow-y-scroll duration-500`}
           >
             <ListCategory
+              className="pb-10"
               list={fakeDataCategories}
               render={(item, i) => (
                 <div key={i}>
@@ -148,10 +149,10 @@ function SideMenu({ isOpen, onCloseMenu }) {
                 </div>
               )}
             />
-            <div className="flex w-full flex-col overflow-y-scroll">
+            <div className="flex w-full flex-col">
               <BackMainMenuButton backToCategory={backToCategory} />
               <ListCategory
-                className="mt-0 [overflow:unset]"
+                className="mt-0 pb-10 [overflow:unset]"
                 list={currSubCategory?.items}
                 render={(item, i) => (
                   <div key={i}>
