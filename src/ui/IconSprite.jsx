@@ -9,6 +9,13 @@ function IconSprite({ name, className, ...props }) {
     "2x-arrow-left": "w-[16px] h-[16px] bg-[length:350px] bg-[-137px_-308.5px]",
     "2x-arrow-right-black":
       "w-[10px] h-[14px] bg-[length:350px] bg-[-166px_-288px]",
+    "2x-arrow-up":
+      "w-[13px] h-[8px] bg-[length:350px] bg-[-184px_-342px] rotate-180",
+    "2x-arrow-down": "w-[13px] h-[8px] bg-[length:350px] bg-[-184px_-342px]",
+    "2x-arrow-up-black":
+      "w-[13px] h-[8px] bg-[length:350px] bg-[-184px_-361px] rotate-180",
+    "2x-arrow-down-black":
+      "w-[13px] h-[8px] bg-[length:350px] bg-[-184px_-361px]",
   };
 
   const global1xStyles = {

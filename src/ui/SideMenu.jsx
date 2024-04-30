@@ -3,7 +3,7 @@ import { fakeDataCategories } from "@src/data/sideMenuData";
 import IconSprite from "./IconSprite";
 import { useState } from "react";
 
-function ItemSubCategory({ subCategory, onClick }) {
+function ExpandButton({ isExpanded = false }) {
   const [isHover, setIsHover] = useState(false);
 
   function handleHover() {
@@ -13,9 +13,47 @@ function ItemSubCategory({ subCategory, onClick }) {
   function handleLeaveHover() {
     setIsHover(false);
   }
+
   return (
     <li
       className="cursor-pointer pl-9 pr-5 hover:bg-me-gray-100"
+      onMouseEnter={handleHover}
+      onMouseLeave={handleLeaveHover}
+    >
+      <div className="flex items-center justify-between py-2.5 text-sm">
+        <div className="flex items-center gap-x-2">
+          <span>{isExpanded ? "See less" : "See more"}</span>
+          {isHover && (
+            <IconSprite
+              name={isExpanded ? "2x-arrow-up-black" : "2x-arrow-down-black"}
+            />
+          )}
+          {!isHover && (
+            <IconSprite name={isExpanded ? "2x-arrow-up" : "2x-arrow-down"} />
+          )}
+        </div>
+      </div>
+    </li>
+  );
+}
+
+function ItemSubCategory({ subCategory, onClick, className }) {
+  const [isHover, setIsHover] = useState(false);
+
+  function handleHover() {
+    setIsHover(true);
+  }
+
+  function handleLeaveHover() {
+    setIsHover(false);
+  }
+
+  if (subCategory.isDivider)
+    return <li className="my-2 ml-9 mr-5 border-t border-t-me-gray-100" />;
+
+  return (
+    <li
+      className={`cursor-pointer pl-9 pr-5 hover:bg-me-gray-100 ${className}`}
       onClick={onClick}
       onMouseEnter={handleHover}
       onMouseLeave={handleLeaveHover}
@@ -32,7 +70,6 @@ function ItemSubCategory({ subCategory, onClick }) {
         {subCategory?.items?.length ? (
           <IconSprite
             name={isHover ? "2x-arrow-right-black" : "2x-arrow-right"}
-            className="hover:"
           />
         ) : (
           false
@@ -43,12 +80,16 @@ function ItemSubCategory({ subCategory, onClick }) {
 }
 
 function ItemCategory({ item, onChangeCategory }) {
+  const [isExpanded] = useState(false);
+  const list = isExpanded ? item.items : item.items.slice(0, 4);
+
   return (
     <div className="flex w-full flex-col">
       <span className="px-9 py-2.5 text-lg font-bold">{item.title}</span>
 
       <ListSubCategory
-        list={item.items}
+        isExpanded={isExpanded}
+        list={list}
         render={(subCategory, i) => (
           <ItemSubCategory
             key={i}
@@ -63,9 +104,14 @@ function ItemCategory({ item, onChangeCategory }) {
   );
 }
 
-function ListSubCategory({ list, render }) {
+function ListSubCategory({ list, render, isExpanded }) {
   if (!list || !list.length) return;
-  return <ul className="flex flex-col">{list.map(render)}</ul>;
+  return (
+    <ul className="flex flex-col duration-150">
+      {list.map(render)}
+      {list.length > 3 && <ExpandButton isExpanded={isExpanded} />}
+    </ul>
+  );
 }
 
 function ListCategory({ list, render, className }) {

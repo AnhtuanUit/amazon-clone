@@ -444,6 +444,10 @@ export const fakeDataCategories = [
         ],
       },
       {
+        title: "",
+        isDivider: true,
+      },
+      {
         title: "Automotive",
         items: [
           {
@@ -986,10 +990,6 @@ export const fakeDataCategories = [
           },
         ],
       },
-      {
-        title: "See less",
-        items: [],
-      },
     ],
   },
   {
@@ -1042,9 +1042,14 @@ export const fakeDataCategories = [
         ],
       },
       {
+        title: "",
+        isDivider: true,
+      },
+      {
         title: "Amazon Second Chance",
         items: [],
       },
+
       {
         title: "See all",
         items: [],
