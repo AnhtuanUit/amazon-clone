@@ -28,18 +28,18 @@ function SearchBox({ className }) {
   return (
     <div className={className}>
       <div
-        className="outline-me-orange-200 flex rounded-md outline-2 outline-offset-0"
+        className="flex rounded-md outline-2 outline-offset-0 outline-me-orange-200"
         ref={refCustomSearchInput}
       >
         <Link
           to="#"
-          className="bg-me-gray-200 border-r-me-gray-400 text-me-gray-500 rounded-xs outline-me-orange-200  hover:bg-me-gray-300 relative flex items-center gap-1.5 rounded-l-md border-r px-2.5 text-xs outline-2 outline-offset-0 hover:text-black"
+          className="rounded-xs relative flex items-center gap-1.5  rounded-l-md border-r border-r-me-gray-400 bg-me-gray-200 px-2.5 text-xs text-me-gray-500 outline-2 outline-offset-0 outline-me-orange-200 hover:bg-me-gray-300 hover:text-black"
           ref={refCustomSelect}
         >
           {seletecText}
           <span
             alt="Icon arrow down"
-            className="border-t-me-gray-500 border-[4px] border-b-0 border-transparent hover:border-t-black"
+            className="border-[4px] border-b-0 border-transparent border-t-me-gray-500 hover:border-t-black"
           >
             <select
               value={selected}
@@ -59,12 +59,12 @@ function SearchBox({ className }) {
         <input
           type="text"
           placeholder="Search Amazon"
-          className="placeholder:text-me-gray-450 grow rounded-none p-2 text-[15px] outline-none [-webkit-appearance:none] [-webkit-border-radius:0]"
+          className="grow rounded-none p-2 text-[15px] outline-none [-webkit-appearance:none] [-webkit-border-radius:0] placeholder:text-me-gray-450"
           onFocus={toggleCustomSearchInputOutline}
           onBlur={toggleCustomSearchInputOutline}
         />
-        <button className="bg-me-orange-50 hover:bg-me-orange-60 focus::bg-me-orange-60 rounded-r-md">
-          <IconSprite name="search" alt="Icon search" />
+        <button className="focus::bg-me-orange-60 rounded-r-md bg-me-orange-50 hover:bg-me-orange-60">
+          <IconSprite name="2x-search" alt="Icon search" />
         </button>
       </div>
     </div>

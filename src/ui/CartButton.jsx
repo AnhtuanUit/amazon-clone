@@ -8,10 +8,10 @@ function CartButton({ className }) {
       <div className="flex items-end">
         {/* Start - Cart Icon */}
         <div className="relative mb-1">
-          <span className="text-me-orange-200 absolute left-[17px] top-[-2px] text-base font-bold leading-none">
+          <span className="absolute left-[17px] top-[-2px] text-base font-bold leading-none text-me-orange-200">
             0
           </span>
-          <IconSprite name="cart" alt="Icon cart" />
+          <IconSprite name="2x-cart" alt="Icon cart" />
         </div>
         {/* End - Cart Icon */}
         <span className="text-sm font-bold text-white">Cart</span>

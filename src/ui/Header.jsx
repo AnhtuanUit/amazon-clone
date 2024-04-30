@@ -9,7 +9,7 @@ function Header({ onOpenMenu }) {
       <nav className="flex items-stretch gap-x-0.5 bg-me-darkblue-500 px-2.5 py-1">
         <NavItem logo={true} className="pl-4px py-1 pr-[2px]" />
         <NavItem
-          iconLeft="location"
+          iconLeft="2x-location"
           textTop={<span className="text-me-gray-300">Deliver to</span>}
           textBottom="Vietnam"
         />
@@ -27,7 +27,7 @@ function Header({ onOpenMenu }) {
               <span className="absolute left-[16.5px] top-[-5px] text-base font-bold leading-none text-me-orange-200">
                 3
               </span>
-              <IconSprite name="cart" alt="Icon cart" />
+              <IconSprite name="2x-cart" alt="Icon cart" />
             </div>
           }
           textBottom="Cart"

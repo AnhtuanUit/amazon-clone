@@ -1,4 +1,5 @@
 import FlagBase from "./FlagBase";
+import IconSprite from "./IconSprite";
 import Logo from "./Logo";
 import { section1, section2, section3 } from "@src/data/footerData";
 
@@ -88,13 +89,18 @@ function Footer() {
 
       <section className="bg-me-darkblue-400">
         <div className="text-me-gray-250 mx-auto flex w-[1000px] flex-col items-center gap-2 py-4">
-          <div className="flex items-center justify-center gap-4">
+          <ul className="flex items-center justify-center gap-4">
             {section3.map((item, i) => (
-              <a href={item.href} key={i} className="text-xs font-medium">
-                {item.title}
-              </a>
+              <li key={i}>
+                <a href={item.href} className="text-xs font-medium">
+                  {item.title}
+                </a>
+              </li>
             ))}
-          </div>
+            <li>
+              <IconSprite name="1x-ads-privacy" />
+            </li>
+          </ul>
           <span className="text-xs font-medium">
             © 1996-2024, Amazon.com, Inc. or its affiliates
           </span>

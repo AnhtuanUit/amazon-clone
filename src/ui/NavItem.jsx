@@ -39,7 +39,7 @@ function NavItem({
       {...props}
     >
       {logo && (
-        <IconSprite name="logo" alt="Amazon logo" className="mt-[12px]" />
+        <IconSprite name="2x-logo" alt="Amazon logo" className="mt-[12px]" />
       )}
       <div className={`flex items-end ${gap}`}>
         {iconLeft && renderIconLeft()}

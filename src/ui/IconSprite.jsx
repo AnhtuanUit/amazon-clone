@@ -1,9 +1,13 @@
 function IconSprite({ name, className, ...props }) {
   const globalStyles = {
-    logo: "w-[97px] h-[30px] bg-[length:350px] bg-[-10px_-51px]",
-    location: "w-[15px] h-[18px] bg-[length:350px] bg-[-71px_-378px]",
-    search: "w-[45px] h-[40px] bg-[length:350px] bg-[2px_-280px]",
-    cart: "w-[38px] h-[26px] bg-[length:350px] bg-[-10px_-340px]",
+    "2x-logo": "w-[97px] h-[30px] bg-[length:350px] bg-[-10px_-51px]",
+    "2x-location": "w-[15px] h-[18px] bg-[length:350px] bg-[-71px_-378px]",
+    "2x-search": "w-[45px] h-[40px] bg-[length:350px] bg-[2px_-280px]",
+    "2x-cart": "w-[38px] h-[26px] bg-[length:350px] bg-[-10px_-340px]",
+  };
+
+  const global1xStyles = {
+    "1x-ads-privacy": "w-[29px] h-[14px] bg-[-136px_-380px]",
   };
 
   const flagStyles = {
@@ -11,15 +15,28 @@ function IconSprite({ name, className, ...props }) {
     "flag-vn": "w-[15px] h-[18px] bg-[length:350px] bg-[-71px_-378px]",
   };
 
-  const styles = name.startsWith("flag-") ? flagStyles : globalStyles;
+  const styleOptions = {
+    flag: {
+      backgroundPattern: "bg-flag-sprite",
+      styles: flagStyles,
+    },
+    "1x": {
+      backgroundPattern: "bg-global-sprite-1x",
+      styles: global1xStyles,
+    },
+    "2x": {
+      backgroundPattern: "bg-global-sprite",
+      styles: globalStyles,
+    },
+  };
 
-  const bgStyle = name.startsWith("flag-")
-    ? "bg-flag-sprite"
-    : "bg-global-sprite";
+  const prefixStyle = name.split("-")[0];
+  const bgStyle = styleOptions?.[prefixStyle].backgroundPattern;
+  const styleClassName = styleOptions?.[prefixStyle].styles[name];
 
   const baseStyle = "float-left";
 
-  const combineClassName = `${bgStyle} ${baseStyle} ${styles[name]} ${className}`;
+  const combineClassName = `${bgStyle} ${baseStyle} ${styleClassName} ${className}`;
 
   return <span className={combineClassName} {...props}></span>;
 }

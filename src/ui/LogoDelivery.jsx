@@ -8,15 +8,15 @@ function LogoDelivery({ className }) {
     <Link to="#" className={combineClassName}>
       <div className="flex items-end gap-1">
         <IconSprite
-          name="location"
+          name="2x-location"
           alt="Icon location"
           className="mb-[1.5px]"
         />
         <div className="flex flex-col">
-          <span className="text-me-gray-300 text-xs font-medium leading-4">
+          <span className="text-xs font-medium leading-4 text-me-gray-300">
             Deliver to
           </span>
-          <span className="text-me-white text-sm font-bold leading-4">
+          <span className="text-sm font-bold leading-4 text-me-white">
             Vietnam
           </span>
         </div>
