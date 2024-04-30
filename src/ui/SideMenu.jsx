@@ -81,7 +81,9 @@ function ItemSubCategory({ subCategory, onClick, className }) {
 
 function ItemCategory({ item, onChangeCategory }) {
   const [isExpanded] = useState(false);
-  const list = isExpanded ? item.items : item.items.slice(0, 4);
+  const isHelpSetting = item.title === "Help & Settings";
+  const list =
+    isHelpSetting || isExpanded ? item.items : item.items.slice(0, 4);
 
   return (
     <div className="flex w-full flex-col">
@@ -106,10 +108,15 @@ function ItemCategory({ item, onChangeCategory }) {
 
 function ListSubCategory({ list, render, isExpanded }) {
   if (!list || !list.length) return;
+
+  const isHelpSettings = list[0].title === "Your Account";
+
   return (
     <ul className="flex flex-col duration-150">
       {list.map(render)}
-      {list.length > 3 && <ExpandButton isExpanded={isExpanded} />}
+      {!isHelpSettings && list.length > 3 && (
+        <ExpandButton isExpanded={isExpanded} />
+      )}
     </ul>
   );
 }

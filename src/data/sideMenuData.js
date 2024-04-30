@@ -1049,11 +1049,6 @@ export const fakeDataCategories = [
         title: "Amazon Second Chance",
         items: [],
       },
-
-      {
-        title: "See all",
-        items: [],
-      },
     ],
   },
   {
