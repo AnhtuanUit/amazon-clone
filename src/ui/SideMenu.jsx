@@ -21,7 +21,14 @@ function ItemSubCategory({ subCategory, onClick }) {
       onMouseLeave={handleLeaveHover}
     >
       <div className="flex items-center justify-between py-2.5 text-sm">
-        <span>{subCategory.title}</span>
+        <div className="flex items-center gap-x-1.5">
+          {subCategory.icon && (
+            <div className="w-6">
+              <IconSprite name={subCategory.icon} className="mb-[1px]" />
+            </div>
+          )}
+          <span>{subCategory.title}</span>
+        </div>
         {subCategory?.items?.length ? (
           <IconSprite
             name={isHover ? "2x-arrow-right-black" : "2x-arrow-right"}
@@ -122,7 +129,7 @@ function SideMenu({ isOpen, onCloseMenu }) {
       <aside
         className={`fixed flex h-full w-96 ${isOpen ? "translate-x-0" : "translate-x-[-100%]"} items-center bg-white duration-500`}
       >
-        <div className="flex h-full w-full flex-col items-start overflow-hidden">
+        <div className="mb-20 flex h-full w-full flex-col items-start overflow-hidden">
           <SideProfile />
           <div
             className={`flex w-[200%] ${isOpenCategory ? "translate-x-[-50%]" : "translate-x-0"} overflow-hidden duration-500`}

@@ -1061,10 +1061,12 @@ export const fakeDataCategories = [
       {
         title: "English",
         items: [],
+        icon: "flag-globe-gray",
       },
       {
         title: "United States",
         items: [],
+        icon: "flag-en",
       },
       {
         title: "Customer Service",

@@ -17,11 +17,14 @@ function IconSprite({ name, className, ...props }) {
   };
 
   const flagStyles = {
-    "flag-en": "w-[24px] h-[18px] bg-[length:194px_295px] bg-[0px_-129px]",
+    "flag-en":
+      "w-[24px] h-[18px] bg-[length:194px_295px] bg-[0px_-129px] scale-90",
     "flag-vn": "w-[15px] h-[18px] bg-[length:350px] bg-[-71px_-378px]",
     "flag-globe": "w-[15px] h-[15px] bg-[length:194px_295px] bg-[-77px_-24px]",
     "flag-up-down-arrow":
       "w-[12px] h-[12px] bg-[length:194px_295px] bg-[-77px_-80px]",
+    "flag-globe-gray":
+      "w-[15px] h-[15px] bg-[length:194px_295px] bg-[-77px_-51px]",
   };
 
   const styleOptions = {
