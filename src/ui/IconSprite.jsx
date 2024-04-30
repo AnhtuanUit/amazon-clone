@@ -8,11 +8,15 @@ function IconSprite({ name, className, ...props }) {
 
   const global1xStyles = {
     "1x-ads-privacy": "w-[29px] h-[14px] bg-[-136px_-380px]",
+    "1x-logo": "w-[76px] h-[23px] bg-[-10px_-90px]",
   };
 
   const flagStyles = {
     "flag-en": "w-[24px] h-[18px] bg-[length:194px_295px] bg-[0px_-130px]",
     "flag-vn": "w-[15px] h-[18px] bg-[length:350px] bg-[-71px_-378px]",
+    "flag-globe": "w-[15px] h-[15px] bg-[length:194px_295px] bg-[-77px_-24px]",
+    "flag-up-down-arrow":
+      "w-[12px] h-[12px] bg-[length:194px_295px] bg-[-77px_-80px]",
   };
 
   const styleOptions = {
@@ -31,8 +35,8 @@ function IconSprite({ name, className, ...props }) {
   };
 
   const prefixStyle = name.split("-")[0];
-  const bgStyle = styleOptions?.[prefixStyle].backgroundPattern;
-  const styleClassName = styleOptions?.[prefixStyle].styles[name];
+  const bgStyle = styleOptions?.[prefixStyle]?.backgroundPattern;
+  const styleClassName = styleOptions?.[prefixStyle]?.styles[name];
 
   const baseStyle = "float-left";
 

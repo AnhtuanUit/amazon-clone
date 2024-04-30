@@ -1,6 +1,4 @@
-import FlagBase from "./FlagBase";
 import IconSprite from "./IconSprite";
-import Logo from "./Logo";
 import { section1, section2, section3 } from "@src/data/footerData";
 
 function ItemSection1({ data }) {
@@ -40,6 +38,20 @@ function ItemSection2({ data }) {
   );
 }
 
+function ButtonSection2({ iconLeft, currency, text, upDownArrow = false }) {
+  return (
+    <div className="border-me-gray-430 flex cursor-pointer items-center gap-x-1 rounded-sm border px-2 py-1">
+      <div className="flex items-center gap-x-1">
+        {iconLeft && <IconSprite name={iconLeft} />}
+        {currency && <span>{currency}</span>}
+        {text && <span className="pr-3 text-xs leading-none">{text}</span>}
+      </div>
+
+      {upDownArrow && <IconSprite name="flag-up-down-arrow" />}
+    </div>
+  );
+}
+
 function Footer() {
   return (
     <footer className="flex flex-col text-white">
@@ -55,26 +67,17 @@ function Footer() {
         </div>
       </section>
 
-      <section className="bg-me-darkblue-400">
-        <div className="mx-auto  flex w-[1000px] items-center justify-center gap-1 py-4">
-          <Logo className="py-6" />
+      <section className="bg-me-darkblue-300">
+        <div className="mx-auto  my-5 flex w-[1000px] items-center justify-center gap-2">
+          <IconSprite name="1x-logo" className="mb-5 mt-7" />
           <div className="ml-16 mt-3 flex gap-2 self-start">
-            <div className="border-me-gray-250 flex cursor-pointer items-center rounded-sm border">
-              <span className="px-2 py-2 text-xs  leading-none">English</span>
-            </div>
-            <div className="border-me-gray-250 flex cursor-pointer items-center rounded-sm border">
-              <span className="px-2 py-2 text-xs  leading-none">
-                VND - Vietnamese Dong
-              </span>
-            </div>
-            <div className="border-me-gray-250 flex cursor-pointer items-center rounded-sm border">
-              <div className="pl-[8px]">
-                <FlagBase iconName="en" />
-              </div>
-              <span className="px-2 py-2 text-xs  leading-none">
-                United States
-              </span>
-            </div>
+            <ButtonSection2
+              iconLeft="flag-globe"
+              text="English"
+              upDownArrow={true}
+            />
+            <ButtonSection2 currency="₫" text="VND - Vietnamese Dong" />
+            <ButtonSection2 iconLeft="flag-en" text="United States" />
           </div>
         </div>
       </section>
@@ -92,7 +95,10 @@ function Footer() {
           <ul className="flex items-center justify-center gap-4">
             {section3.map((item, i) => (
               <li key={i}>
-                <a href={item.href} className="text-xs font-medium">
+                <a
+                  href={item.href}
+                  className="text-xs font-medium hover:underline"
+                >
                   {item.title}
                 </a>
               </li>
