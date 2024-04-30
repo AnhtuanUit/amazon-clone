@@ -4,12 +4,29 @@ import IconSprite from "./IconSprite";
 import { useState } from "react";
 
 function ItemSubCategory({ subCategory, onClick }) {
+  const [isHover, setIsHover] = useState(false);
+
+  function handleHover() {
+    setIsHover(true);
+  }
+
+  function handleLeaveHover() {
+    setIsHover(false);
+  }
   return (
-    <li className="cursor-pointer px-9 hover:bg-me-gray-100" onClick={onClick}>
-      <div className="flex justify-between py-2.5 text-sm">
+    <li
+      className="cursor-pointer pl-9 pr-5 hover:bg-me-gray-100"
+      onClick={onClick}
+      onMouseEnter={handleHover}
+      onMouseLeave={handleLeaveHover}
+    >
+      <div className="flex items-center justify-between py-2.5 text-sm">
         <span>{subCategory.title}</span>
         {subCategory?.items?.length ? (
-          <IconSprite name="2x-arrow-right" />
+          <IconSprite
+            name={isHover ? "2x-arrow-right-black" : "2x-arrow-right"}
+            className="hover:"
+          />
         ) : (
           false
         )}
