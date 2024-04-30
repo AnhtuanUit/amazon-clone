@@ -119,7 +119,7 @@ function SideMenu({ isOpen, onCloseMenu }) {
     <>
       <div
         onClick={onCloseMenu}
-        className={`fixed h-full w-full bg-[#000000b3] ${isOpen ? "visible opacity-100" : "invisible opacity-0"} duration-500`}
+        className={`fixed z-10 h-full w-full bg-[#000000b3] ${isOpen ? "visible opacity-100" : "invisible opacity-0"} duration-500`}
       >
         <div className="ml-3 mt-3">
           <HiOutlineXMark className="ml-80 h-8 w-40 text-white" />
@@ -127,7 +127,7 @@ function SideMenu({ isOpen, onCloseMenu }) {
       </div>
 
       <aside
-        className={`fixed flex h-full w-96 ${isOpen ? "translate-x-0" : "translate-x-[-100%]"} items-center bg-white duration-500`}
+        className={`fixed z-20 flex h-full w-96 ${isOpen ? "translate-x-0" : "translate-x-[-100%]"} items-center bg-white duration-500`}
       >
         <div className="mb-20 flex h-full w-full flex-col items-start overflow-hidden">
           <SideProfile />
