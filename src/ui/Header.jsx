@@ -35,15 +35,45 @@ function Header({ onOpenMenu }) {
         />
       </nav>
 
-      <div className="flex bg-[#232f3e]">
-        <button
-          className="flex items-center text-white"
-          onClick={() => onOpenMenu()}
+      <ul className="flex bg-[#232f3e] pb-[1px]">
+        <li
+          className="flex items-center rounded-[3px] border border-transparent px-0.5 py-0.5 text-sm text-white hover:border-white
+            "
         >
-          <HiOutlineBars3 className="inline-block h-8 w-8" />
-          <span>All</span>
-        </button>
-      </div>
+          <button
+            className="flex items-center gap-x-1 px-3.5 py-1.5 hover:ring-0"
+            onClick={() => onOpenMenu()}
+          >
+            <div className="flex flex-col gap-1">
+              <div className="h-[2px] w-4 bg-white" />
+              <div className="h-[2px] w-4 bg-white" />
+              <div className="h-[2px] w-4 bg-white" />
+            </div>
+            <span>All</span>
+          </button>
+        </li>
+        {[
+          "Today's Deals",
+          "Buy Again",
+          "Do's Amazon.com",
+          "Customer Service",
+          "Sell",
+          "Browsing History",
+          "Registry",
+          "Gift Cards",
+        ].map((item, i) => (
+          <li
+            key={i}
+            className="flex items-center rounded-[3px] border border-transparent px-0.5 text-sm text-white hover:border-white"
+          >
+            <a href="#" className="px-3.5 py-1.5 hover:ring-0">
+              <span>{item}</span>
+            </a>
+          </li>
+        ))}
+
+        <a></a>
+      </ul>
     </header>
   );
 }
