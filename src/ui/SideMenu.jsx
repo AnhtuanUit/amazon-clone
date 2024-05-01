@@ -3,7 +3,7 @@ import { fakeDataCategories } from "@src/data/sideMenuData";
 import IconSprite from "./IconSprite";
 import { useState } from "react";
 
-function ExpandButton({ isExpanded = false }) {
+function ExpandButton({ isExpanded = false, onSeeAll, onSeeLess }) {
   const [isHover, setIsHover] = useState(false);
 
   function handleHover() {
@@ -14,13 +14,24 @@ function ExpandButton({ isExpanded = false }) {
     setIsHover(false);
   }
 
+  function handleToggle() {
+    if (isExpanded) {
+      onSeeLess();
+    } else {
+      onSeeAll();
+    }
+  }
+
   return (
     <li
       className="cursor-pointer pl-9 pr-5 hover:bg-me-gray-100"
       onMouseEnter={handleHover}
       onMouseLeave={handleLeaveHover}
     >
-      <div className="flex items-center justify-between py-2.5 text-sm">
+      <div
+        className="flex items-center justify-between py-2.5 text-sm"
+        onClick={handleToggle}
+      >
         <div className="flex items-center gap-x-2">
           <span>{isExpanded ? "See less" : "See more"}</span>
           {isHover && (
@@ -79,18 +90,31 @@ function ItemSubCategory({ subCategory, onClick, className }) {
   );
 }
 
-function ItemCategory({ item, onChangeCategory }) {
-  const [isExpanded] = useState(false);
+function ItemCategory({ item, onChangeCategory, isSecondLayout }) {
+  const [isExpanded, setExpanded] = useState(false);
   const isHelpSetting = item.title === "Help & Settings";
   const list =
-    isHelpSetting || isExpanded ? item.items : item.items.slice(0, 4);
+    isSecondLayout || isHelpSetting || isExpanded
+      ? item.items
+      : item.items.slice(0, 4);
+
+  function seeAll() {
+    setExpanded(true);
+  }
+
+  function seeLess() {
+    setExpanded(false);
+  }
 
   return (
     <div className="flex w-full flex-col">
       <span className="px-9 py-2.5 text-lg font-bold">{item.title}</span>
 
       <ListSubCategory
+        isSecondLayout={isSecondLayout}
         isExpanded={isExpanded}
+        onSeeLess={seeLess}
+        onSeeAll={seeAll}
         list={list}
         render={(subCategory, i) => (
           <ItemSubCategory
@@ -106,7 +130,14 @@ function ItemCategory({ item, onChangeCategory }) {
   );
 }
 
-function ListSubCategory({ list, render, isExpanded }) {
+function ListSubCategory({
+  list,
+  render,
+  isExpanded,
+  onSeeAll,
+  onSeeLess,
+  isSecondLayout,
+}) {
   if (!list || !list.length) return;
 
   const isHelpSettings = list[0].title === "Your Account";
@@ -114,8 +145,12 @@ function ListSubCategory({ list, render, isExpanded }) {
   return (
     <ul className="flex flex-col duration-150">
       {list.map(render)}
-      {!isHelpSettings && list.length > 3 && (
-        <ExpandButton isExpanded={isExpanded} />
+      {!isSecondLayout && !isHelpSettings && list.length > 3 && (
+        <ExpandButton
+          isExpanded={isExpanded}
+          onSeeAll={onSeeAll}
+          onSeeLess={onSeeLess}
+        />
       )}
     </ul>
   );
@@ -209,7 +244,7 @@ function SideMenu({ isOpen, onCloseMenu }) {
                 list={currSubCategory?.items}
                 render={(item, i) => (
                   <div key={i}>
-                    <ItemCategory item={item} />
+                    <ItemCategory item={item} isSecondLayout={true} />
                     {currSubCategory?.items.length - 1 > i && (
                       <div className="my-2.5 border-t-[1px] border-me-gray-200" />
                     )}
