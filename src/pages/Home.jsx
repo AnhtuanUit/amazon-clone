@@ -10,7 +10,7 @@ function Homepage() {
         <Slider />
       </div>
       <div className="relative mx-auto mb-5 w-full max-w-[1500px]">
-        <div className="mt-80 flex flex-col gap-y-5 px-4">
+        <div className="desktop:mt-80 mt-52 flex flex-col gap-y-5 px-4">
           <SquareSection data={fakeSquareData} />
           <SliderSection type="sell-off" headerOption="see-more" />
           <SliderSection type="image" />

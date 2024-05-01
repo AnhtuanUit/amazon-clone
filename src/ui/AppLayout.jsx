@@ -19,7 +19,7 @@ function AppLayout() {
     <div className="grid h-screen grid-rows-[auto_1fr_auto]">
       <Header onOpenMenu={openMenu} />
       <SideMenu isOpen={isOpen} onCloseMenu={closeMenu} />
-      <div>
+      <div className="relative w-full">
         <Outlet />
       </div>
       <Footer />
