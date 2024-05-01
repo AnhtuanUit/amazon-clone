@@ -2,7 +2,7 @@ import { tailwindBgColor } from "@src/utils/helpers";
 import { useEffect, useState } from "react";
 import IconSprite from "./IconSprite";
 
-function Slider() {
+function Slider({ className }) {
   const images = [
     "/images/heroes/hero1.png",
     "/images/heroes/hero2.png",
@@ -45,7 +45,9 @@ function Slider() {
   );
 
   return (
-    <div className={`relative w-full overflow-hidden ${tailwindBgColor()}`}>
+    <div
+      className={`relative w-full overflow-hidden ${tailwindBgColor()} ${className}`}
+    >
       {images.map((imgSrc, i) => {
         const imagePosition = images.length + i - 1 - position;
         return (
