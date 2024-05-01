@@ -6,7 +6,7 @@ import { fakeSquareData } from "@src/data/squareData";
 function Homepage() {
   return (
     <>
-      <div className="absolute left-[50%] w-full max-w-[1500px] translate-x-[-50%]">
+      <div className="absolute left-[50%] w-full min-w-[1000px] max-w-[1500px] translate-x-[-50%]">
         <Slider />
       </div>
       <div className="relative mx-auto mb-5 w-full max-w-[1500px]">
