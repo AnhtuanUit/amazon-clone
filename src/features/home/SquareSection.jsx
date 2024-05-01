@@ -1,4 +1,5 @@
 import { tailwindBgColor } from "@src/utils/helpers";
+import { useMediaQuery } from "react-responsive";
 
 function FourProduct({ data }) {
   return (
@@ -68,9 +69,17 @@ function SepecialFourProduct({ data }) {
 }
 
 function SquareSection({ data }) {
+  const isMaxDesktop = useMediaQuery({ query: `(min-width: 1240px)` });
+
+  const list = isMaxDesktop
+    ? data
+    : data.slice(0, data.length - (data.length % 3));
+
   return (
-    <section className={`grid max-w-[1480px] grid-cols-4 gap-4`}>
-      {data.map((item, i) => (
+    <section
+      className={`desktop:grid-cols-4 grid max-w-[1480px] grid-cols-3 gap-4`}
+    >
+      {list.map((item, i) => (
         <div key={i} className={`basis-full ${tailwindBgColor()}`}>
           {item.isSpecial ? (
             <SepecialFourProduct data={item} />
