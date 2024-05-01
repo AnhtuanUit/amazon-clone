@@ -2,7 +2,7 @@ import Slider from "@src/ui/Slider";
 
 function Homepage() {
   return (
-    <div className="w-full">
+    <div className="mx-auto w-full max-w-[1500px]">
       <Slider />
     </div>
   );
