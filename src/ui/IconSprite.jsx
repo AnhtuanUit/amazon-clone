@@ -34,6 +34,30 @@ function IconSprite({ name, className, ...props }) {
       "w-[15px] h-[15px] bg-[length:194px_295px] bg-[-77px_-51px]",
   };
 
+  const bigArrowStyles = {
+    "3x-arrow-left": "w-[34px] h-[52px] bg-[length:68px_52px] bg-[0_0]",
+    "3x-arrow-right": "w-[34px] h-[52px] bg-[length:68px_52px] bg-[-34px_0]",
+  };
+
+  const mediumIconStyles = {
+    "md-arrow-left": "w-[13px] h-[22px] bg-[length:132px_235px] bg-[-14px_0]",
+    "md-arrow-right": "w-[13px] h-[22px] bg-[length:132px_235px] bg-[0_0]",
+  };
+
+  const smallIconStyles = {
+    "sm-arrow-left":
+      "w-[11px] h-[15px] bg-[length:400px_900px] bg-[-123px_-7px]",
+    "sm-arrow-right":
+      "w-[11px] h-[15px] bg-[length:400px_900px] bg-[-105px_-7px]",
+  };
+
+  const starsIconStyles = {
+    "stars-small-4-5":
+      "w-[80px] h-[18px] bg-[length:512px_512px] bg-[-84px_-260px]",
+    "stars-small-4":
+      "w-[80px] h-[18px] bg-[length:512px_512px] bg-[-84px_-240px]",
+  };
+
   const styleOptions = {
     flag: {
       backgroundPattern: "bg-flag-sprite",
@@ -46,6 +70,22 @@ function IconSprite({ name, className, ...props }) {
     "2x": {
       backgroundPattern: "bg-global-sprite",
       styles: globalStyles,
+    },
+    "3x": {
+      backgroundPattern: "bg-big-arrow-sprites",
+      styles: bigArrowStyles,
+    },
+    md: {
+      backgroundPattern: "bg-medium-icon-sprites",
+      styles: mediumIconStyles,
+    },
+    sm: {
+      backgroundPattern: "bg-sm-icon-sprites",
+      styles: smallIconStyles,
+    },
+    stars: {
+      backgroundPattern: "bg-stars-icon-sprites",
+      styles: starsIconStyles,
     },
   };
 

@@ -1,9 +1,11 @@
+import Slider from "@src/ui/Slider";
+
 function Homepage() {
   return (
-    <div>
-      Home page
+    <div className="w-full">
+      <Slider />
     </div>
-  )
+  );
 }
 
-export default Homepage
+export default Homepage;

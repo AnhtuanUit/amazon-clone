@@ -49,14 +49,18 @@ export default {
         },
       },
       backgroundImage: {
-        "logo-pattern":
-          "url('https://m.media-amazon.com/images/G/01/gno/sprites/nav-sprite-global-2x-reorg-privacy._CB587940754_.png')",
-        "flag-pattern":
-          "url('https://m.media-amazon.com/images/S/sash/Jls8KSxf2o8RQVi.png')",
         "flag-sprite": "url('/images/flag-sprite-global.png')",
         "global-sprite": "url('/images/nav-sprite-global.png')",
         "global-sprite-1x":
           "url('https://m.media-amazon.com/images/G/01/gno/sprites/nav-sprite-global-1x-reorg-privacy._CB587940754_.png')",
+        "big-arrow-sprites":
+          "url('https://m.media-amazon.com/images/S/sash/ydDD9hnRfziI$y7.png')",
+        "medium-icon-sprites":
+          "url('https://m.media-amazon.com/images/S/sash/g3Ux380Nnt6-OWJ.png')",
+        "sm-icon-sprites":
+          "url('https://m.media-amazon.com/images/S/sash/McBZv0ZvnbehkIx.png')",
+        "stars-icon-sprites":
+          "url('https://m.media-amazon.com/images/S/sash/fe7v9cZH5dQOFva.png')",
       },
     },
   },
